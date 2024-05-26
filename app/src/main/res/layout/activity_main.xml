@@ -5,15 +5,43 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/login"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="247dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="282dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="247dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="192dp"
+        android:ems="10"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:text="password" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="247dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="95dp"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="576dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,4 +19,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/meetingListsTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1,2,3,4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <!-- column headers -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/header_color" >
+
+            <TextView
+                android:layout_height="57dp"
+                android:gravity="center"
+                android:text="Title" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Subject" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Date" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Duration" />
+
+            <TextView
+                android:gravity="center"
+                android:text="Status" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/startMeet"
+        android:layout_width="295dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="80dp"
+        android:text="Start Meet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

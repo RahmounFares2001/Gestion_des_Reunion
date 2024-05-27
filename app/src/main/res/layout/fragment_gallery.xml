@@ -1,22 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gallery.GalleryFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:id="@+id/text_gallery"
+    <!-- Text Inputs -->
+    <EditText
+        android:id="@+id/meetTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:hint="Meet Title"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:id="@+id/meetSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meet Subject"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/meetDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meet Description"
+        android:inputType="text"/>
+
+    <!-- Date Input -->
+    <EditText
+        android:id="@+id/meetDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Meet Date"
+        android:inputType="date"/>
+
+    <!-- Number Input -->
+    <EditText
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duration"
+        android:inputType="number"/>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4"/>
+
+    <!-- Additional Text Inputs -->
+    <EditText
+        android:id="@+id/participant1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="participant 01"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/participant2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="participant 02"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/participant3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="participant 03"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/participant4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="participant 04"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+</LinearLayout>

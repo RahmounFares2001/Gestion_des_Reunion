@@ -6,17 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".ui.slideshow.SlideshowFragment">
 
-    <TextView
-        android:id="@+id/text_slideshow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="728dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- durationn -->
+        <EditText
+            android:id="@+id/durationn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Duration"
+            android:inputType="number"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"/>
+
+        <!-- part 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp" >
+
+            <Button
+                android:id="@+id/participant01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Participant 01" />
+
+            <EditText
+                android:id="@+id/duration1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Duration 1"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- part 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp" >
+
+            <Button
+                android:id="@+id/participant02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Participant 02" />
+
+            <EditText
+                android:id="@+id/duration2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Duration 2"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- part 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp" >
+
+            <Button
+                android:id="@+id/participant03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Participant 03" />
+
+            <EditText
+                android:id="@+id/duration3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Duration 3"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- part 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/participant04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Participant 04" />
+
+            <EditText
+                android:id="@+id/duration4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Duration 4"
+                android:inputType="number" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

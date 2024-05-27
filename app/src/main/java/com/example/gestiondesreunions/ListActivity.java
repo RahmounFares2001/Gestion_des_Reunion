@@ -1,8 +1,12 @@
 package com.example.gestiondesreunions;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -37,6 +41,8 @@ public class ListActivity extends AppCompatActivity {
                         .setAnchorView(R.id.fab).show();
             }
         });
+
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -48,6 +54,35 @@ public class ListActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_list);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+        // get table
+        TableLayout tableLayout = findViewById(R.id.meetingListsTable);
+
+        // table data
+        String[][] tableData = {
+                {"Title 1", "Subject 1", "Date 1", "Duration 1", "Status 1"},
+        };
+
+        for (String[] row : tableData) {
+            TableRow tableRow = new TableRow(this);
+            tableRow.setLayoutParams(new TableRow.LayoutParams(
+                    TableRow.LayoutParams.MATCH_PARENT,
+                    TableRow.LayoutParams.WRAP_CONTENT));
+
+            for (String cell : row) {
+                TextView textView = new TextView(this);
+                textView.setLayoutParams(new TableRow.LayoutParams(
+                        TableRow.LayoutParams.WRAP_CONTENT,
+                        TableRow.LayoutParams.WRAP_CONTENT));
+                textView.setText(cell);
+                textView.setPadding(16, 16, 16, 16);
+                textView.setGravity(Gravity.CENTER);
+                tableRow.addView(textView);
+            }
+
+            tableLayout.addView(tableRow);
+        }
     }
 
     @Override
